@@ -94,7 +94,7 @@
       @include centerFlex('vertical');
       
       img {
-        height: 80%;
+        height: 80px;
       }
     }
     ul {
