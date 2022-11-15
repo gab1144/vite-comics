@@ -39,6 +39,19 @@
             ]
           },
           {
+            linkListName: "Shop",
+            linkList: [
+              {
+                text: "Shop Dc",
+                href: '#'
+              },
+              {
+                text: "Shop Dc Collectibles",
+                href: '#'
+              }
+            ]
+          },
+          {
             linkListName: "Dc",
             linkList: [
               {
@@ -112,21 +125,39 @@
                 href: '#'
               }
             ]
+          }
+        ],
+
+        socialLinks: [
+          {
+            img: "footer-facebook.png",
+            href: "#"
+
           },
           {
-            linkListName: "Shop",
-            linkList: [
-              {
-                text: "Shop Dc",
-                href: '#'
-              },
-              {
-                text: "Shop Dc Collectibles",
-                href: '#'
-              }
-            ]
+            img: "footer-twitter.png",
+            href: "#"
+            
+          },
+          {
+            img: "footer-youtube.png",
+            href: "#"
+          },
+          {
+            img: "footer-pinterest.png",
+            href: "#"
+          },
+          {
+            img: "footer-periscope.png",
+            href: "#"
           }
+
         ]
+      }
+    },
+    methods:{
+      getImagePath(imageName){
+        return new URL(`../assets/img/${imageName}`, import.meta.url).href
       }
     }
   }
@@ -163,20 +194,8 @@
         <div class="social-links">
           <h4>Follow us</h4>
           <ul>
-            <li>
-              <a href="#"><img src="../assets/img/footer-facebook.png" alt=""></a>
-            </li>
-            <li>
-              <a href="#"><img src="../assets/img/footer-twitter.png" alt=""></a>
-            </li>
-            <li>
-              <a href="#"><img src="../assets/img/footer-youtube.png" alt=""></a>
-            </li>
-            <li>
-              <a href="#"><img src="../assets/img/footer-pinterest.png" alt=""></a>
-            </li>
-            <li>
-              <a href="#"><img src="../assets/img/footer-periscope.png" alt=""></a>
+            <li v-for="social of socialLinks">
+              <a :href="social.href"><img :src="getImagePath(social.img)" alt=""></a>
             </li>
           </ul>
         </div>
@@ -200,26 +219,39 @@
         padding: 30px 0;
         display: flex;
         flex-wrap: wrap;
-        width: 50%;
+        flex-direction: column;
+        width: 30%;
       }
       .img-area{
         background-image: url("../assets/img/dc-logo-bg.png");
         background-position: center;
         background-repeat: no-repeat;
         height: 100%;
-        width: 50%;
+        width: 100%;
       }
     }
+
+    .links:nth-child(1) {
+      margin-bottom: 15px;
+    }
     .links {
+      height:min-content;
       width: calc(100%/3);
+      min-width: 130px;
       h4{
         text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 15px;
       }
       ul {
         list-style: none;
+        li {
+          margin-bottom: 5px;
+        }
         a{
           color: grey;
           text-decoration: none;
+          font-size: 13px;
         }
       }
     }
