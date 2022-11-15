@@ -136,15 +136,19 @@
   <footer>
     <div class="footer-top">
       <div class="container">
-        <div class="links"
-        v-for="list in links">
-          <h4>{{list.linkListName}}</h4>
-          <nav>
-            <ul>
-              <li 
-              v-for="link in list.linkList"><a :href="link.href">{{link.text}}</a></li>
-            </ul>
-          </nav>
+        <div class="link-area">
+          <div class="links"
+          v-for="list in links">
+            <h4>{{list.linkListName}}</h4>
+            <nav>
+              <ul>
+                <li 
+                v-for="link in list.linkList"><a :href="link.href">{{link.text}}</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="img-area">
         </div>
       </div>
     </div>
@@ -186,12 +190,25 @@
   @use '../style/partials/variables' as *;
   @use '../style/partials/mixin' as *;
   .footer-top{
-    padding: 30px 0;
     background-image: url("../assets/img/footer-bg.jpg");
+    background-size: cover;
     color: white;
     .container {
-    display: flex;
-    flex-wrap: wrap;
+      display: flex;
+      height: 370px;
+      .link-area {  
+        padding: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+      }
+      .img-area{
+        background-image: url("../assets/img/dc-logo-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 50%;
+      }
     }
     .links {
       width: calc(100%/3);
