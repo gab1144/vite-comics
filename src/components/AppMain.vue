@@ -1,6 +1,10 @@
 <script>
+  import BlueBar from './BlueBar.vue'
   export default {
-    name: 'AppMain'
+    name: 'AppMain',
+    components: {
+      BlueBar
+    }
   }
 </script>
 
@@ -9,6 +13,9 @@
     <div class="container">
       <h2> ---&gt; Content goes here &lt;--- </h2>
     </div>
+
+    <BlueBar/>
+    
   </main>
 </template>
 
