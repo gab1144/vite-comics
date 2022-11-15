@@ -61,22 +61,24 @@
 </script>
 
 <template>
-  <header class="container">
-  <div class="logo">
-    <!-- percorso assoluto perché l'immagine è in public -->
-    <img src="/dc-logo.png" alt="Logo Dc">
-  </div>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="/dc-logo.png" alt="Logo Dc">
+      </div>
   
-  <nav>
-      <ul>
-        <li
+      <nav>
+        <ul>
+          <li
           v-for="(link, index) in menu"
-          :key="index"
-        ><a :class="{'active': link.current}" :href="link.href">{{link.text}}</a></li>
-      </ul>
-    </nav>
-  
+          :key="index">
+            <a :class="{'active': link.current}" :href="link.href">{{link.text}}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
+  
 </template>
 
 <style lang="scss" scoped>
@@ -84,7 +86,7 @@
   @use '../style/partials/variables' as *;
   @use '../style/partials/mixin' as *;
 
-  header {
+  .container {
     display: flex;
     justify-content: space-between;
     height: 115px;

@@ -54,19 +54,21 @@
   .icons-area {
     background-color: $primary-color;
     .container {
-      @include centerFlex('vertical');
-      justify-content: space-between;
+      @include centerFlex('both');
+      flex-wrap: wrap;
       text-transform: uppercase;
       .icon {
         padding: 50px 0;
         width: calc(100%/5);
-        @include centerFlex('vertical');
+        min-width: 205px;
+        @include centerFlex('both');
         img {
           height: 55px;
           margin-right: 15px;
         }
         span {
           display: block;
+          text-overflow: ellipsis;;
         }
       }
     }
