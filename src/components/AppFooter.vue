@@ -258,8 +258,10 @@
       @include centerFlex('vertical');
       justify-content: space-between;
       .button {
+        flex-shrink: 0;
         border: 2px solid $primary-color;
         padding: 15px;
+        margin-right: 20px;
         a {
           color: white;
           text-transform: uppercase;
@@ -273,6 +275,7 @@
           text-transform: uppercase;
           margin-right: 20px;
           color: $primary-color;
+          flex-shrink: 0;
         }
         ul{
           display: flex;
