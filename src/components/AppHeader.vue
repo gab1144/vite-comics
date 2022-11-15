@@ -116,7 +116,7 @@
         font-weight: 600;
           &:hover,
           &.active{
-          border-bottom: 6px solid blue;
+          border-bottom: 6px solid $primary-color;
           }
       }
     }

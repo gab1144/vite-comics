@@ -52,7 +52,7 @@
   @use '../style/partials/mixin' as *;
 
   .icons-area {
-    background-color: blue;
+    background-color: $primary-color;
     .container {
       @include centerFlex('vertical');
       justify-content: space-between;

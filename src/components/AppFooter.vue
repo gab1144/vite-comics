@@ -157,7 +157,7 @@
       <div class="container">
 
         <div class="button">
-          <a href="#">Sign-up-now!</a>
+          <a href="#">Sign-up now!</a>
         </div>
         
         <div class="social-links">
@@ -232,7 +232,7 @@
       justify-content: space-between;
     }
     .button {
-      border: 2px solid blue;
+      border: 2px solid $primary-color;
       padding: 15px;
       a {
         color: white;
@@ -246,7 +246,7 @@
       h4 {
         text-transform: uppercase;
         margin-right: 20px;
-        color: blue;
+        color: $primary-color;
       }
       ul{
         display: flex;
