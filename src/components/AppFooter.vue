@@ -179,8 +179,6 @@
             </nav>
           </div>
         </div>
-        <div class="img-area">
-        </div>
       </div>
     </div>
 
@@ -215,76 +213,73 @@
     .container {
       display: flex;
       height: 370px;
+      background-image: url("../assets/img/dc-logo-bg.png");
+      background-position:right;
+      background-repeat: no-repeat;
       .link-area {  
         padding: 30px 0;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        width: 30%;
-      }
-      .img-area{
-        background-image: url("../assets/img/dc-logo-bg.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100%;
-        width: 100%;
-      }
-    }
 
-    .links:nth-child(1) {
-      margin-bottom: 15px;
-    }
-    .links {
-      height:min-content;
-      width: calc(100%/3);
-      min-width: 130px;
-      h4{
-        text-transform: uppercase;
-        font-size: 20px;
-        margin-bottom: 15px;
-      }
-      ul {
-        list-style: none;
-        li {
-          margin-bottom: 5px;
+        .links:nth-child(1) {
+          margin-bottom: 15px;
         }
-        a{
-          color: grey;
-          text-decoration: none;
-          font-size: 13px;
+        .links {
+          height:min-content;
+          width: calc(calc(100%/3)/3);
+          min-width: 130px;
+          
+          h4{
+            text-transform: uppercase;
+            font-size: 20px;
+            margin-bottom: 15px;
+          }
+          ul {
+            list-style: none;
+            li {
+              margin-bottom: 5px;
+            }
+            a{
+              color: grey;
+              text-decoration: none;
+              font-size: 13px;
+            }
+          }
         }
       }
     }
   }
+    
   .footer-bottom {
     background-color: rgb(48, 48, 48);
     color: white;
     .container {
       @include centerFlex('vertical');
       justify-content: space-between;
-    }
-    .button {
-      border: 2px solid $primary-color;
-      padding: 15px;
-      a {
-        color: white;
-        text-transform: uppercase;
-        text-decoration: none;
+      .button {
+        border: 2px solid $primary-color;
+        padding: 15px;
+        a {
+          color: white;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
       }
-    }
-    .social-links{
-      padding: 30px 0;
-      @include centerFlex('vertical');
-      h4 {
-        text-transform: uppercase;
-        margin-right: 20px;
-        color: $primary-color;
-      }
-      ul{
-        display: flex;
-        list-style: none;
-        li {
-          margin: 0 5px;
+      .social-links{
+        padding: 30px 0;
+        @include centerFlex('vertical');
+        h4 {
+          text-transform: uppercase;
+          margin-right: 20px;
+          color: $primary-color;
+        }
+        ul{
+          display: flex;
+          list-style: none;
+          li {
+            margin: 0 5px;
+          }
         }
       }
     }
