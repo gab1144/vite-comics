@@ -1,6 +1,7 @@
 <script>
   import Jumbotron from './Jumbotron.vue';
   import ComicCard from './ComicCard.vue';
+  import ButtonLoadMore from './ButtonLoadMore.vue';
   import BlueBar from './BlueBar.vue';
   import comics from '../data/dc-comics';
 
@@ -9,7 +10,8 @@
     components: {
       BlueBar,
       ComicCard,
-      Jumbotron
+      Jumbotron,
+      ButtonLoadMore
     },
     data(){
       return{
@@ -32,10 +34,9 @@
         :cardImage="comic.thumb"
         :cardTitle="comic.series"/>
       </div>
-      
-      <button>
-        Load more
-      </button>
+
+      <ButtonLoadMore/>
+
     </div>
 
     <BlueBar/>
@@ -64,14 +65,7 @@
         font-size: 25px;
         font-weight: 800;
       }
-      button {
-        background-color: $primary-color;
-        padding: 10px 60px;
-        text-transform: uppercase;
-        border: none;
-        color: white;
-        font-weight: 800;
-        font-size: 12px;
+      .btn-load-more {
         align-self: center;
       }
     }
