@@ -1,14 +1,15 @@
 <script>
-
+  import Jumbotron from './Jumbotron.vue';
   import ComicCard from './ComicCard.vue';
-  import BlueBar from './BlueBar.vue'
-  import comics from '../data/dc-comics'
+  import BlueBar from './BlueBar.vue';
+  import comics from '../data/dc-comics';
 
   export default {
     name: 'AppMain',
     components: {
       BlueBar,
-      ComicCard
+      ComicCard,
+      Jumbotron
     },
     data(){
       return{
@@ -20,6 +21,7 @@
 
 <template>
   <main>
+    <Jumbotron/>
     <div class="container">
       <div class="card-area">
         <ComicCard
