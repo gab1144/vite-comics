@@ -32,7 +32,8 @@
         v-for="(comic, index) of comics" 
         :key="index"
         :cardImage="comic.thumb"
-        :cardTitle="comic.series"/>
+        :cardTitle="comic.series"
+        :comicPrice="comic.price"/>
       </div>
 
       <ButtonLoadMore/>
@@ -72,7 +73,7 @@
     
     .card-area {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
       width: 100%;
     }

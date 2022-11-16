@@ -21,5 +21,8 @@ export default {
     color: white;
     font-weight: 800;
     font-size: 12px;
+    &:hover{
+      cursor: pointer;
+    }
   }
 </style>
